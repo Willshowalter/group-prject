@@ -373,7 +373,7 @@ game.onUpdateInterval(500, function () {
         .....777.....77.........
         ....7.........7.........
         `, SpriteKind.Enemy)
-    zombie.setVelocity(-100, 0)
+    zombie.setVelocity(-100, 100)
     zombie.setPosition(160, randint(0, 120))
     zombie.follow(man)
 })
