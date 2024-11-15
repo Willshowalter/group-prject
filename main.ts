@@ -302,6 +302,15 @@ function scoreMoreThan30 () {
         music.play(music.melodyPlayable(music.spooky), music.PlaybackMode.UntilDone)
     }
 }
+sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
+    sprites.destroy(otherSprite)
+    info.changeScoreBy(1)
+})
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
+    sprites.destroy(otherSprite)
+    scene.cameraShake(4, 500)
+    info.changeLifeBy(-1)
+})
 let zombie: Sprite = null
 let bullet: Sprite = null
 let myDart: Sprite = null
