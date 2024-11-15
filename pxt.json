@@ -3,7 +3,8 @@
     "description": "",
     "dependencies": {
         "device": "*",
-        "darts": "*"
+        "darts": "*",
+        "group project": "pub:11894-38884-58974-91519"
     },
     "files": [
         "main.blocks",
